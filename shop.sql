@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.3
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jan 09, 2017 at 11:10 AM
--- Server version: 5.7.16-0ubuntu0.16.04.1
--- PHP Version: 7.0.8-0ubuntu0.16.04.3
+-- Host: 127.0.0.1
+-- Generation Time: Jan 09, 2017 at 01:08 PM
+-- Server version: 10.1.9-MariaDB
+-- PHP Version: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -156,7 +156,7 @@ INSERT INTO `proveedores` (`id`, `nombre`) VALUES
 (2, 'DB-enio'),
 (3, 'Seervice'),
 (73, 'Abades'),
-(99, 'Lar-post');
+(99, 'Lar-postee');
 
 -- --------------------------------------------------------
 
@@ -213,21 +213,13 @@ INSERT INTO `usuarios` (`id`, `nombre`, `apellidos`, `telefono`, `fecha_nacimien
 (3, 'Maria', 'Dolmen piriz', 934671209, '1992-10-23', 'c/gran via n 289 6º 1ª', '39100438T', 'mariaDB@hotmail.com', 'mariela', '81dc9bdb52d04dc20036dbd8313ed055', 'Vilafranca', 'España', 100, 0),
 (5, 'David', 'Sánchez Devesa', 647933210, '2000-02-03', 'C/De las nieves', '23455632s', 'davidete@horing.com', 'davidin', '81dc9bdb52d04dc20036dbd8313ed055', 'sabadell', 'Espanya', 500, 1),
 (6, 'sandra', 'perez López', 935778912, '2000-03-06', 'c/bud 1 3', '23677896-j', 'princesa@horoingo.com', 'sandra', '81dc9bdb52d04dc20036dbd8313ed055', 'sabadell', 'españa', 100, 0),
-(7, 'davide', 'davide', 698755645, '0000-00-00', 'wffgfgfd', '47555985', 'sdgfsg@gotmal.com', 'davide', '81dc9bdb52d04dc20036dbd8313ed055', 'sggfds', 'dfgdfg', 100, 0),
-(9, 'der', 'der', 145698789, '0000-00-00', 'egg', '45899654', 'ergg@df.com', 'der', '81dc9bdb52d04dc20036dbd8313ed055', 'egerge', 'egg', 100, 0),
-(10, 'der', '', 0, '0000-00-00', '', '', '', '', '', '', '', 100, 0),
-(11, 'fsfs', 'sdfsd', 45631, '0000-00-00', 'sdg', '45899658N', 'sdfsdf@sdgf.com', 'qwe', '81dc9bdb52d04dc20036dbd8313ed055', 'rewr', 'werew', 100, 0),
-(12, 'wrwer', 'qwee', 5789654, '0000-00-00', 'fsfdsfds', '45698875N', 'dsfdsf@fdsf.com', 'werr', '81dc9bdb52d04dc20036dbd8313ed055', 'sfdsf', 'sdfdsf', 100, 0),
-(13, 'qwe', 'qwee', 45698, '0000-00-00', 'qweqeqwe', '45899874D', 'sdfd@sfdf.com', 'dddd', '81dc9bdb52d04dc20036dbd8313ed055', 'dfdffs', 'sdfsdf', 100, 0),
-(14, 'erwer', 'werwer', 456987, '0000-00-00', 'sdfdsfds', '45699874G', 'sdfdsf@hot.com', 'rrrr', '81dc9bdb52d04dc20036dbd8313ed055', 'sdgffsg', 'sfsdgf', 100, 0),
-(15, 'qwer', 'qwer', 569875, '0000-00-00', 'qwe', '58999632D', 'qeqwe@sfdgfs.com', 'yyyy', '81dc9bdb52d04dc20036dbd8313ed055', 'sdfsf', 'sdfsdf', 100, 0),
-(16, 'dssa', 'dsad', 564896, '0000-00-00', 'sgdsf', '45699874D', 'sff@sdf.com', 'jjjj', '81dc9bdb52d04dc20036dbd8313ed055', 'dfsdfs', 'sdfsdf', 100, 0);
+(21, 'ewew', 'ewew', 45645645, '1212-12-12', 'werwerew', '23455332O', 'werwer@hotmai.com', 'coco', 'd93591bdf7860e1e4ee2fca799911215', 'fdfdfd', 'fdfdf', 100, 0),
+(22, 'dare', 'terb', 45699875, '1983-03-02', 'calle de la par 12', '45698754D', 'afadafs@hotml.com', 'Cerber', 'd93591bdf7860e1e4ee2fca799911215', 'sabadell', 'Catalunya', 100, 0);
 
 -- --------------------------------------------------------
 
 --
 -- Stand-in structure for view `vist_prod`
--- (See below for the actual view)
 --
 CREATE TABLE `vist_prod` (
 `id` int(11)
@@ -325,7 +317,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT for table `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 --
 -- AUTO_INCREMENT for table `tipo_producto`
 --
@@ -335,7 +327,7 @@ ALTER TABLE `tipo_producto`
 -- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- Constraints for dumped tables
 --
