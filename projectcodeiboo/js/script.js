@@ -9,7 +9,7 @@ function mostrar(e){                //para mostrar detalles producto      //Moda
 	document.getElementsByTagName('body')[0].innerHTML+=
 	'<div id="borr">'+
 		'<div id="in">'+
-			'<img src="http://localhost/projectcodeiboo/images/x.png" onclick="cerrar();" class="butt"/><br/><br/>'+
+			'<img src="'+baseurl+'images/x.png" onclick="cerrar();" class="butt"/><br/><br/>'+
 			'<p>'+nom+'</p>'+	
 			'<div class="flexinit">'+
 				'<figure class="flex"><img src="'+src+'" alt="'+nom+'"/></figure><br/><br/>'+
@@ -54,7 +54,7 @@ function mosrar(e){                //para mostrar detalles producto a gente sin 
 	document.getElementsByTagName('body')[0].innerHTML+=
 	'<div id="borr">'+
 		'<div id="in">'+
-		'<img src="http://localhost/projectcodeiboo/images/x.png" onclick="cerrar();" class="butt"/><br/><br/>'+
+		'<img src="'+baseurl+'images/x.png" onclick="cerrar();" class="butt"/><br/><br/>'+
 			'<p>'+nom+'</p>'+	
 			'<div class="flexinit">'+
 				'<figure><img src="'+src+'" alt="'+nom+'"/></figure><br/><br/>'+
@@ -84,7 +84,7 @@ $(document).ready(function() {     //al pulsar modificar en proveedores sale mod
 			
 			 //asignamos el nuevo valor del input a l avariable que ira a BD
 			
-			$.post('http://localhost/projectcodeiboo/index.php/admin/updateDeal',{filtro:id,nombre:nom2},function(htmlexterno){
+			$.post(''+baseurl+'admin/updateDeal',{filtro:id,nombre:nom2},function(htmlexterno){
    $("#resu").html(htmlexterno);
 			//modificamos el listado que hay por debajo del modal	
 			
@@ -117,7 +117,7 @@ $(document).ready(function() {     //al pulsar delete en proveedores sale modal 
 		$(".modal-body>button").html('Eliminar');
 		$(".modal-body>button").removeClass().addClass('btn btn-danger');
 		$(".modal-body>button").click(function(){
-			$.post('http://localhost/projectcodeiboo/index.php/admin/deleteDeal',{filtro:id},function(htmlexterno){
+			$.post(''+baseurl+'admin/deleteDeal',{filtro:id},function(htmlexterno){
    			$("#resu").html(htmlexterno);
 			if(htmlexterno!='el proveedor esta vinculado'){
 				$('*[data-id="'+id+'"]').parent().parent().remove();
@@ -140,7 +140,7 @@ $(document).ready(function(){
 			 nom=$("#creator").val();
 			})
 			$(".modal-body>button").click(function(){
-				$.post('http://localhost/projectcodeiboo/index.php/admin/createDeal',{filtro:nom},function(htmlexterno){
+				$.post(''+baseurl+'admin/createDeal',{filtro:nom},function(htmlexterno){
 	   			$("#resu").html(htmlexterno);
               
 	   			//modificamos el listado que hay por debajo del modal	
@@ -175,7 +175,7 @@ function mod(el){	      //misma funcion que update con nombre para asignarla al 
 			
 			 //asignamos el nuevo valor del input a l avariable que ira a BD
 			
-			$.post('http://localhost/projectcodeiboo/index.php/admin/updateDeal',{filtro:id,nombre:nom2},function(htmlexterno){
+			$.post(''+baseurl+'admin/updateDeal',{filtro:id,nombre:nom2},function(htmlexterno){
    			$("#resu").html(htmlexterno);
 			//modificamos el listado que hay por debajo del modal	
 			
@@ -195,7 +195,7 @@ function del(el){	    //misma funcion que delete con nombre para asignarla al ne
 		$(".modal-body>button").html('Eliminar');
 		$(".modal-body>button").removeClass().addClass('btn btn-danger');
 		$(".modal-body>button").click(function(){
-			$.post('http://localhost/projectcodeiboo/index.php/admin/deleteDeal',{filtro:id},function(htmlexterno){
+			$.post(''+baseurl+'admin/deleteDeal',{filtro:id},function(htmlexterno){
    			$("#resu").html(htmlexterno);
 			if(htmlexterno!='el proveedor esta vinculado'){
                 $('*[data-id="'+id+'"]').parent().parent().remove();
