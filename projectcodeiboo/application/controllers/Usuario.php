@@ -182,7 +182,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				$datos['mensaje'] = 'Eliminado OK';
 				$this->load_view('view/exito.php', $datos);
 			}
-		}
+		}*/
 		public function ajaxvery(){
 			$user = $this->input->post('filtro');
 			$usuario = new UsuarioModel;
@@ -194,7 +194,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			else {
 				return TRUE;
 			}
-		}*/
+		}
 	}
 
 

@@ -210,7 +210,7 @@ $(document).ready(function(){            //ajax para verificar user en el regist
 	$('#userajax').keyup(function(){
 		var user = $(this).val();
 		var num = user.length;
-		$.post( ""+baseurl+"usuario/ajaxvery",{filtro:user}, function( result ) {
+		$.post( ''+baseurl+'usuario/ajaxvery',{filtro:user}, function( result ) {
 			
   		if(result == false || num < 3){        //si no tine mas de 2 cifras o esta en base de datos  letras en rojo
   			$('#userajax').css('color','red');

@@ -15,8 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 			$user_table = 'usuarios';
 			$consulta = "INSERT INTO $user_table(nombre, apellidos, telefono, fecha_nacimiento, direccion, dni, email, user,
 			password, ciudad, pais,  privilegio, admin)
-			VALUES ('$this->nombre','$this->apellidos','$this->telefono','$this->fecha_nacimiento','$this->direccion',
-			'$this->dni','$this->email','$this->user','$this->password','$this->ciudad','$this->pais',100,0);";
+			VALUES (".$this->db->escape($this->nombre).",".$this->db->escape($this->apellidos).",".$this->db->escape($this->telefono).",".$this->db->escape($this->fecha_nacimiento).",".$this->db->escape($this->direccion).",
+			".$this->db->escape($this->dni).",".$this->db->escape($this->email).",".$this->db->escape($this->user).",".$this->db->escape($this->password).",".$this->db->escape($this->ciudad).",".$this->db->escape($this->pais).",100,0);";
 				
 			return $this->db->query($consulta);
 		}
